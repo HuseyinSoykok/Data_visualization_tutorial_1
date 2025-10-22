@@ -1,0 +1,134 @@
+Got it — I kept your code exactly as-is and only added concise, helpful comments to guide students while you live-explain.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<!--
+This is a template for an html webpage. You can open it by opening the file in your browser.
+The information in the <head> determines some of the meta data of a page. E.g. encoding, title, device
+-->
+<head>
+  <!--
+    The <meta> description is used by search engines and link previews.
+    Keep it short (≈150–160 chars).
+  -->
+  <meta name="description" content="Webpage description goes here" />
+  <!-- Character encoding: UTF-8 is the modern default and supports most languages. -->
+  <meta charset="utf-8">
+  <!-- The <title> is shown in the browser tab and used by bookmarks. -->
+  <title>Hello world</title>
+  <!--
+    Responsive viewport: ensures proper sizing on phones/tablets.
+    Without this, mobile browsers may scale/zoom the page oddly.
+  -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Simple author meta tag (optional). -->
+  <meta name="author" content="Markus Wallinger">
+
+  <!--
+    The cascading style sheets (CSS) partitions the actual structure of the webpage from the style.
+    You could also set styles inline (style="...") or in a <style> tag, but a separate file scales better.
+
+    CSS format refresher:
+
+      selector {
+        property-1: value;
+        property-2: value;
+      }
+
+    Common selectors:
+      .className  -> targets elements with class="className"
+      #idName     -> targets the single element with id="idName"
+      tagName     -> targets all <tagName> elements (e.g., p, h1, div)
+
+    Specificity (who wins when rules conflict) roughly:
+      inline style > #id > .class > tag
+  -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  
+<!-- Single-line comment: use comments to annotate code without affecting layout. -->
+
+<!--
+  h1 is the top-level heading. In modern documents, prefer one <h1> per page,
+  and then use <h2>, <h3>, ... inside sections if needed.
+-->
+<h1 id="my-headline">
+This is a headline of our page
+</h1>
+
+<!--
+  <p> creates a paragraph block with margin in default browser styles.
+  Note: plain text outside <p> is still valid HTML, but it won't receive paragraph spacing.
+-->
+<p>
+  there should be some spacing now for this paragrpah
+</p>
+
+<!--
+  The following two lines are text nodes outside a <p>.
+  Browsers collapse consecutive whitespace, so “line breaks” in source don’t produce visible spacing.
+  Use <br> for a single line break, or wrap text in <p> for paragraphs.
+-->
+And here is some text that should be a paragraph
+there should be line break
+
+<!--
+  A <div> is a generic block container.
+  id="my-container" (ID) should be unique on the page and is great for JS hooks or one-off styles.
+  class="simple-container" (CLASS) can be reused across many elements to share styles.
+-->
+<div id="my-container" class="simple-container">
+  <h1>
+    This is a headline of our page
+    </h1>
+    
+    <p>
+      there should be some spacing now for this paragrpah
+    </p>
+    And here is some text that should be a paragraph
+    there should be line break
+</div>
+
+<!--
+  Multiple classes can be space-separated. Here: "simple-container" plus "large-margin".
+  In CSS you might have:
+    .simple-container { padding: 1rem; border: 1px solid #ddd; }
+    .large-margin { margin: 2rem; }
+  Combining classes composes styles.
+-->
+<div class="simple-container large-margin">
+  <h1>
+    This is a headline of our page
+    </h1>
+    
+    <p>
+      there should be some spacing now for this paragrpah
+    </p>
+    And here is some text that should be a paragraph
+    there should be line break
+</div>
+
+<!--
+  <script> at the end of <body> allows the HTML above to load before JS runs,
+  which avoids “element not found” errors without needing DOMContentLoaded listeners.
+
+  Typical next steps you might demo here:
+    // Select by ID (unique)
+    // const el = document.getElementById('my-headline');
+    // el.textContent = 'Updated via JavaScript';
+
+    // Select by class (may return many)
+    // document.querySelectorAll('.simple-container').forEach(d => d.style.background = '#f9f9f9');
+
+    // Add/remove a class to toggle styles defined in CSS
+    // document.getElementById('my-container').classList.toggle('large-margin');
+-->
+<script>
+</script>
+
+</body>
+</html>
+```

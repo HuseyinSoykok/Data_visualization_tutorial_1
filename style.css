@@ -1,0 +1,20 @@
+
+h1 {
+    background-color: brown;
+    font-size: 50px;
+   }
+
+   #my-headline {
+    background-color: salmon;
+   }
+
+   .simple-container {
+    background-color: cornflowerblue;
+    height: 300px;
+    width: 80%;
+   }
+
+   .large-margin {
+    margin: 40px;
+    padding: 100px;
+   }
